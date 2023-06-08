@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-
 import { Roboto } from 'next/font/google';
 
 import 'bootstrap/dist/css/bootstrap-reboot.min.css'
@@ -11,6 +10,7 @@ import './global.css'
 // Custom imports for components
 import Header from '@/components/navs/Header';
 import Copyright from '@/components/text/Copyright';
+import { i18n } from '@/app/i18n-config'
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -39,15 +39,20 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://github.com/AbhayPai/nextjs-starter'),
 };
 
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }))
+}
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: { lang: string }
 }) {
 
   return (
-    <html lang='en'>
+    <html lang={params.lang}>
       <link rel='icon' href={`${process.env.assetsBasePath + '/favicon.ico'}`}
         type='image/x-icon' sizes='any' />
       <body className={'bg-light' + roboto.className}>

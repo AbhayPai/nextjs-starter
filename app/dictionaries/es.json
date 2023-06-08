@@ -1,0 +1,16 @@
+{
+  "header": {
+    "brandName": "SiguienteJs 13+ Starter"
+  },
+  "content": {
+    "home": {
+      "title": "Home-es"
+    },
+    "blogs": {
+      "title": "Blogs-es"
+    },
+    "blog": {
+      "title": "Blog-es"
+    }
+  }
+}

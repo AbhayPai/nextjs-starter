@@ -1,7 +1,8 @@
 import Link from "next/link";
+
 import getPostsData from "../../data/getPostsData";
 
-export default async function Post({id}: {id: number}) {
+export default async function Post({id}: {id: number}): Promise<any> {
   const postData = await getPostsData(id);
 
   return (

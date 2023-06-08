@@ -1,0 +1,16 @@
+{
+  "header": {
+    "brandName": "NextJs 13+ Starter"
+  },
+  "content": {
+    "home": {
+      "title": "Home"
+    },
+    "blogs": {
+      "title": "Blogs"
+    },
+    "blog": {
+      "title": "Blog"
+    }
+  }
+}
